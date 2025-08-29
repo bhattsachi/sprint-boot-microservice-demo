@@ -1,9 +1,9 @@
-FROM openjdk:17-jre-slim
+FROM openjdk:17
 
-WORKDIR /app
-COPY target/*.jar app.jar
+COPY target/*.jar productsmicroserice.jar
+
+ENTRYPOINT [ "java","-jar","productsmicroserice.jar" ]
+
 EXPOSE 8080
-CMD [ "jave","-jar","app-jar" ]
-
 
 
